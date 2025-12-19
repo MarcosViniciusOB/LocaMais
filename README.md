@@ -49,7 +49,7 @@ O sistema segue uma arquitetura modular documentada na [Especificação de Siste
 
 ### Diagrama de Classes
 A estrutura separa claramente as camadas de visualização (`*Frame.java`), utilitários (`DateUtil`, `ValidadorCPF`) e modelo de dados.
-*(Coloque a imagem do diagrama de classes do seu Word aqui)*
+
 ![Diagrama de Classes](Documentação/diagramas/Diagrama%20de%20classes%20-%20LocaMais.jpg)
 
 ### Fluxo de Sequência (Reserva)
