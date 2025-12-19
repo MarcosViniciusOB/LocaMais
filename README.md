@@ -23,18 +23,18 @@ Diferente de sistemas básicos, o Loca Mais implementa **internacionalização n
 
 | Login & Internacionalização | Dashboard Principal | Nova Reserva |
 |:---:|:---:|:---:|
-| ![Tela de Login](assets/login-print.png) | ![Dashboard](assets/dashboard-print.png) | ![Nova Reserva](assets/reserva-print.png) |
+| ![Tela de Login](Documentação/prints%20das%20telas/tela%20de%20login.png) | ![Dashboard](Documentação/prints%20das%20telas/tela%20principal.png) | ![Nova Reserva](Documentação/prints%20das%20telas/tela%20cadastrar%20reserva.png) |
 
 ---
 
 ## 🛠️ Tecnologias e Decisões Técnicas
 
-O projeto foi construído utilizando **Java Puro (Vanilla)**, focando no domínio profundo da linguagem e da biblioteca Swing, sem dependência de frameworks visuais externos.
+O projeto foi construído utilizando **Java**, focando no domínio profundo da linguagem e da biblioteca Swing, sem dependência de frameworks visuais externos.
 
 * **Linguagem:** Java JDK 8+.
 * **Interface (GUI):** Java Swing com gerenciadores de layout manuais (`GridBagLayout`, `BorderLayout`) para interfaces responsivas.
-* **Persistência:** MySQL com JDBC puro (padrão DAO/Repository).
-* **Design Patterns:** Singleton (Conexão DB), Factory (Componentes Visuais) e MVC (Separação Lógica/Visual).
+* **Persistência:** MySQL com JDBC.
+* **Design Patterns:** Singleton (Conexão DB), Factory (Componentes Visuais).
 
 ### 🌟 Destaques de Engenharia:
 1.  **Transações ACID:** O sistema de reservas utiliza `conn.setAutoCommit(false)` para garantir atomicidade. A reserva só é criada se o veículo for baixado do estoque com sucesso; caso contrário, tudo é revertido (Rollback).
@@ -45,16 +45,16 @@ O projeto foi construído utilizando **Java Puro (Vanilla)**, focando no domíni
 
 ## 📐 Arquitetura
 
-O sistema segue uma arquitetura modular documentada na [Especificação de Sistema](./ERS_Modelo_Geral.docx).
+O sistema segue uma arquitetura modular documentada na [Especificação de Sistema](Documentação/ERS_Modelo_Geral.docx).
 
 ### Diagrama de Classes
 A estrutura separa claramente as camadas de visualização (`*Frame.java`), utilitários (`DateUtil`, `ValidadorCPF`) e modelo de dados.
 *(Coloque a imagem do diagrama de classes do seu Word aqui)*
-![Diagrama de Classes](assets/diagrama-classes.png)
+![Diagrama de Classes](Documentação/diagramas/Diagrama%20de%20classes%20-%20LocaMais.jpg)
 
 ### Fluxo de Sequência (Reserva)
 Demonstração da interação entre a interface, o validador de CPF e o banco de dados durante uma nova locação.
-![Diagrama de Sequência](assets/diagrama-sequencia.png)
+![Diagrama de Sequência](Documentação/diagramas/Diagrama%20de%20Sequência%20-%20LocaMais%20(Nova%20Reserva).png)
 
 ---
 
@@ -64,6 +64,7 @@ Demonstração da interação entre a interface, o validador de CPF e o banco de
 * [Java JDK 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) ou superior.
 * [MySQL Server](https://dev.mysql.com/downloads/mysql/).
 * Uma IDE Java (IntelliJ, Eclipse ou NetBeans).
+* Usar o XAMPP para rodar o servidor local do banco de dados.
 
 ### 🎲 Configurando o Banco de Dados
 1.  Crie um banco de dados no MySQL chamado `locamais`.
@@ -71,13 +72,13 @@ Demonstração da interação entre a interface, o validador de CPF e o banco de
 3.  No arquivo `Main.java`, classe `Conexao`, verifique se as credenciais batem com as da sua máquina:
     ```java
     private static final String USER = "root";
-    private static final String PASSWORD = ""; // Coloque sua senha aqui
+    private static final String PASSWORD = ""; 
     ```
 
 ### 💻 Executando
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/SEU_USUARIO/LocaMais.git](https://github.com/SEU_USUARIO/LocaMais.git)
+    git clone [https://github.com/MarcosViniciusOB/LocaMais.git](https://github.com/MarcosViniciusOB/LocaMais.git)
     ```
 2.  Abra o projeto na sua IDE.
 3.  Execute a classe principal `Main.java`.
@@ -103,7 +104,7 @@ Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para d
 <div align="center">
   Desenvolvido por <strong>Marcos Vinicius</strong> 🚀
   <br>
-  <a href="LINK_DO_SEU_LINKEDIN">
+  <a href="https://www.linkedin.com/in/marcos-vinicius-oliveira-422962234/" target="_blanck">
     <img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white">
   </a>
 </div>
