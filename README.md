@@ -19,7 +19,6 @@ Diferente de sistemas básicos, o Loca Mais implementa **internacionalização n
 ---
 
 ## 📸 Screenshots
-*(Adicione aqui prints das telas do seu sistema para mostrar a interface)*
 
 | Login & Internacionalização | Dashboard Principal | Nova Reserva |
 |:---:|:---:|:---:|
